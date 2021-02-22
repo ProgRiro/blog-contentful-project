@@ -9,7 +9,7 @@ export const Hero: React.FC = () => {
           h1 {
             font-size: 60px;
             text-align: center;
-            border: solid 8px black;
+            border: solid 5px black;
           }
         `}
       </style>
