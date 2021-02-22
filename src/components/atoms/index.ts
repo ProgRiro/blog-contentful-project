@@ -3,3 +3,4 @@ export * from "./Button";
 export * from "./Hero";
 export * from "./Title";
 export * from "./Avatar";
+export * from "./AuthorName";
