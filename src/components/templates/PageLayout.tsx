@@ -5,7 +5,7 @@ import Head from "next/head";
 import { Hero, Title } from "@/components/atoms";
 
 interface Props {
-  title: string;
+  title?: string;
 }
 
 export const PageLayout: React.FC<Props> = ({ children, title }) => {
