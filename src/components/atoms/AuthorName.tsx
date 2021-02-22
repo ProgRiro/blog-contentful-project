@@ -7,6 +7,7 @@ export const AuthorName: React.FC = ({ children }) => {
       <style jsx>
         {`
           color: gray;
+          font-weight: bold;
           margin-left: 10px;
         `}
       </style>
