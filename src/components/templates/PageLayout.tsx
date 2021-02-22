@@ -2,13 +2,21 @@ export const config = { amp: true };
 
 import Head from "next/head";
 
-export const PageLayout: React.FC = ({ children }) => {
+import { Hero, Title } from "@/components/atoms";
+
+interface Props {
+  title: string;
+}
+
+export const PageLayout: React.FC<Props> = ({ children, title }) => {
   return (
     <>
       <div className="container">
         <Head>
-          <title>ProgRiro Blog</title>
+          <title>{title} | ProgRiro Blog</title>
         </Head>
+        <Hero />
+        <Title>{title}</Title>
         {children}
         <style jsx>{`
           .container {
