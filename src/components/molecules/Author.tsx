@@ -19,6 +19,10 @@ export const Author: React.FC<Props> = ({ authorName, avatarSrc }) => {
           .authorContainer {
             display: flex;
             align-items: center;
+            margin: 20px;
+            position: absolute;
+            top: 200px;
+            right: 0;
           }
         `}
       </style>
