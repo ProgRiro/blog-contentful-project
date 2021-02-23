@@ -3,7 +3,7 @@ export const config = { amp: true };
 export const Footer: React.FC = () => {
   return (
     <>
-      <div>Footer</div>
+      <footer>Footer</footer>
       <style jsx>{``}</style>
     </>
   );
