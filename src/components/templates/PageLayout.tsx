@@ -3,6 +3,7 @@ export const config = { amp: true };
 import Head from "next/head";
 
 import { Hero, Title } from "@/components/atoms";
+import { Footer } from "@/components/organisms";
 
 interface Props {
   title?: string;
@@ -18,6 +19,7 @@ export const PageLayout: React.FC<Props> = ({ children, title }) => {
         <Hero />
         <Title>{title}</Title>
         {children}
+        <Footer />
         <style jsx>{`
           .container {
             width: 80%;

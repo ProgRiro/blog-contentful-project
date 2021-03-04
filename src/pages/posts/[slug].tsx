@@ -1,7 +1,9 @@
 export const config = { amp: true };
 
+import { PostLayout } from "@/components/templates";
+
 const Post = () => {
-  return <div>Post</div>;
+  return <PostLayout>Post</PostLayout>;
 };
 
 export default Post;
