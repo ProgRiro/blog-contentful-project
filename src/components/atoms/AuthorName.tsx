@@ -8,8 +8,6 @@ export const AuthorName: React.FC = ({ children }) => {
         {`
           small {
             color: gray;
-            font-weight: bold;
-            margin-left: 10px;
           }
         `}
       </style>

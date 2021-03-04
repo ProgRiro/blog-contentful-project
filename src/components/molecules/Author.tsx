@@ -18,6 +18,8 @@ export const Author: React.FC<Props> = ({ authorName, avatarSrc }) => {
         {`
           .authorContainer {
             display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
             margin: 20px;
             position: absolute;
