@@ -6,11 +6,11 @@ import {
 } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
-const Icons = {
+export const Icons = {
   github: faGithub,
   twitter: faTwitter,
 };
-type Icons = keyof typeof Icons;
+export type Icons = keyof typeof Icons;
 
 interface Props extends FontAwesomeIconProps {
   icon: Icons;
