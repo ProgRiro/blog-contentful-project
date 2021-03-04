@@ -6,9 +6,11 @@ export const AuthorName: React.FC = ({ children }) => {
       <small>{children}</small>
       <style jsx>
         {`
-          color: gray;
-          font-weight: bold;
-          margin-left: 10px;
+          small {
+            color: gray;
+            font-weight: bold;
+            margin-left: 10px;
+          }
         `}
       </style>
     </>
