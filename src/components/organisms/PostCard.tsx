@@ -5,21 +5,27 @@ import { Author } from "@/components/molecules";
 export const PostCard: React.FC = () => {
   return (
     <>
-      <div className="postCardContainer">
-        <amp-img
-          width="auto"
-          height="280px"
-          src="https://blog.zoom.us/wp-content/uploads/2020/11/iStock-1162009698-scaled.jpg"
-          alt="a cool image"
-        />
-        <Author authorName="ProgRiro" avatarSrc="/progriro.jpg" />
-        <div className="postCardTextContainer">
-          <h3>Lorem ipsum dolor sit amet consectetur</h3>
-          <small className="date">2021/03/11</small>
+      <a href="#">
+        <div className="postCardContainer">
+          <amp-img
+            width="auto"
+            height="280px"
+            src="https://blog.zoom.us/wp-content/uploads/2020/11/iStock-1162009698-scaled.jpg"
+            alt="a cool image"
+          />
+          <Author authorName="ProgRiro" avatarSrc="/progriro.jpg" />
+          <div className="postCardTextContainer">
+            <h3>Lorem ipsum dolor sit amet consectetur</h3>
+            <small className="date">2021/03/11</small>
+          </div>
         </div>
-      </div>
+      </a>
       <style jsx>
         {`
+          a {
+            text-decoration: none;
+            color: #000;
+          }
           .postCardContainer {
             width: 100%;
             padding-bottom: 15px;
