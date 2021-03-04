@@ -1,10 +1,13 @@
 export const config = { amp: true };
 
+import { Icons } from "@/components/molecules";
+
 export const Footer: React.FC = () => {
   return (
     <>
       <footer>
-        <small>Footer</small>
+        <Icons />
+        <small>© Copyright 2021 ProgRiro All rights reserved.</small>
       </footer>
       <style jsx>
         {`
