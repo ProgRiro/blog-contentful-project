@@ -1,5 +1,6 @@
 export const config = { amp: true };
 
+import Link from "next/link";
 import { Author } from "@/components/molecules";
 
 interface Props {
@@ -28,24 +29,26 @@ export const PostCard: React.FC<Props> = ({ post }) => {
 
   return (
     <>
-      <a href="#">
-        <div className="postCardContainer">
-          <amp-img
-            width="auto"
-            height="280px"
-            src={post.coverImage.url}
-            alt={`${post.title}-cover-image`}
-          />
-          <Author
-            authorName={post.author.name}
-            avatarSrc={post.author.picture.url}
-          />
-          <div className="postCardTextContainer">
-            <h3>{post.title}</h3>
-            <small className="date">{published.toLocaleDateString()}</small>
+      <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
+        <a>
+          <div className="postCardContainer">
+            <amp-img
+              width="auto"
+              height="280px"
+              src={post.coverImage.url}
+              alt={`${post.title}-cover-image`}
+            />
+            <Author
+              authorName={post.author.name}
+              avatarSrc={post.author.picture.url}
+            />
+            <div className="postCardTextContainer">
+              <h3>{post.title}</h3>
+              <small className="date">{published.toLocaleDateString()}</small>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </Link>
       <style jsx>
         {`
           a {
