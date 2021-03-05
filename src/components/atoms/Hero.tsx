@@ -1,11 +1,21 @@
 export const config = { amp: true };
 
+import Link from "next/link";
+
 export const Hero: React.FC = () => {
   return (
     <>
-      <h1>ProgRiro Blog</h1>
+      <Link href="/">
+        <a>
+          <h1>ProgRiro Blog</h1>
+        </a>
+      </Link>
       <style jsx>
         {`
+          a {
+            color: #000;
+            text-decoration: none;
+          }
           h1 {
             margin: 2em 0;
             position: relative;
