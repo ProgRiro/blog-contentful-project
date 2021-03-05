@@ -11,7 +11,7 @@ export const PostBody = ({ content }: any) => {
         {`
           .postContent {
             width: 90%;
-            margin: 0 auto;
+            margin: 50px auto;
           }
         `}
       </style>
