@@ -1,7 +1,5 @@
 export const config = { amp: true };
 
-import Head from "next/head";
-
 import { Hero, Title } from "@/components/atoms";
 import { Footer, Meta } from "@/components/organisms";
 
@@ -15,7 +13,7 @@ export const PageLayout: React.FC<Props> = ({ children, title }) => {
       <Meta />
       <div className="container">
         <Hero />
-        <Title>{title}</Title>
+        {title && <Title>{title}</Title>}
         {children}
         <Footer />
         <style jsx>{`
