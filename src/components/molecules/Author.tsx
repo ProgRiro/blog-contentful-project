@@ -21,10 +21,19 @@ export const Author: React.FC<Props> = ({ authorName, avatarSrc }) => {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin: 20px;
             position: absolute;
             top: 200px;
             right: 0;
+            width: 120px;
+            height: 140px;
+            border-radius: 50%;
+            background: radial-gradient(
+              circle,
+              rgba(255, 255, 255, 1),
+              rgba(255, 255, 255, 0.9),
+              rgba(255, 255, 255, 0.1),
+              rgba(255, 255, 255, 0)
+            );
           }
         `}
       </style>
