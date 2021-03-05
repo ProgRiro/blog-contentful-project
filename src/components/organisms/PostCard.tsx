@@ -33,9 +33,10 @@ export const PostCard: React.FC<Props> = ({ post }) => {
         <a>
           <div className="postCardContainer">
             <amp-img
-              width="auto"
-              height="280px"
+              width="300"
+              height="200"
               src={post.coverImage.url}
+              layout="responsive"
               alt={`${post.title}-cover-image`}
             />
             <div className="author">
@@ -45,7 +46,7 @@ export const PostCard: React.FC<Props> = ({ post }) => {
               />
             </div>
             <div className="postCardTextContainer">
-              <h3>{post.title}</h3>
+              <h3 className="title">{post.title}</h3>
               <small className="date">{published.toLocaleDateString()}</small>
             </div>
           </div>
@@ -74,9 +75,12 @@ export const PostCard: React.FC<Props> = ({ post }) => {
             margin: 0 20px;
             text-align: center;
           }
+          .title {
+            margin-top: 30px;
+          }
           .author {
             position: absolute;
-            top: 200px;
+            top: 165px;
             right: 0;
           }
           .date {
