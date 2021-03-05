@@ -35,8 +35,8 @@ export const PostHeader: React.FC<Props> = ({
             </amp-timeago>
           </div>
           <amp-img
-            width="160"
-            height="90"
+            width="300"
+            height="200"
             src={coverImageUrl}
             layout="responsive"
             alt={`${title}-cover-image`}
