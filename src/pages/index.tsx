@@ -15,7 +15,6 @@ export default function Home({
   preview: boolean;
   allPosts: getPostResponseInterface[];
 }) {
-  console.log(allPosts);
   return (
     <PageLayout>
       <Head>
