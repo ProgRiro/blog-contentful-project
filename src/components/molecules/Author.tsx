@@ -21,9 +21,6 @@ export const Author: React.FC<Props> = ({ authorName, avatarSrc }) => {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            position: absolute;
-            top: 200px;
-            right: 0;
             width: 120px;
             height: 140px;
             border-radius: 50%;

@@ -38,10 +38,12 @@ export const PostCard: React.FC<Props> = ({ post }) => {
               src={post.coverImage.url}
               alt={`${post.title}-cover-image`}
             />
-            <Author
-              authorName={post.author.name}
-              avatarSrc={post.author.picture.url}
-            />
+            <div className="author">
+              <Author
+                authorName={post.author.name}
+                avatarSrc={post.author.picture.url}
+              />
+            </div>
             <div className="postCardTextContainer">
               <h3>{post.title}</h3>
               <small className="date">{published.toLocaleDateString()}</small>
@@ -71,6 +73,11 @@ export const PostCard: React.FC<Props> = ({ post }) => {
           .postCardTextContainer {
             margin: 0 20px;
             text-align: center;
+          }
+          .author {
+            position: absolute;
+            top: 200px;
+            right: 0;
           }
           .date {
             display: block;
