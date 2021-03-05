@@ -4,7 +4,7 @@ import { POST_GRAPHQL_FIELDS } from "./graphqlSchema";
 const fetchGraphQL = async (
   query: string,
   preview = false
-): Promise<getPostResponseInterface> => {
+): Promise<getPostResponseInterface[]> => {
   return fetch(
     `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
     {
@@ -26,7 +26,7 @@ const extractPost = (fetchResponse: any): getPostResponseInterface => {
   return fetchResponse?.data?.postCollection?.items?.[0];
 };
 
-const extractPostEntries = (fetchResponse: any): getPostResponseInterface => {
+const extractPostEntries = (fetchResponse: any): getPostResponseInterface[] => {
   return fetchResponse?.data?.postCollection?.items;
 };
 
@@ -77,7 +77,13 @@ export const getAllPostsForHome = async (preview: boolean) => {
   return extractPostEntries(entries);
 };
 
-export const getPosts = async (slug: string, preview: boolean) => {
+export const getPosts = async (
+  slug: string,
+  preview: boolean
+): Promise<{
+  post: getPostResponseInterface;
+  morePosts: getPostResponseInterface[];
+}> => {
   const entry = await fetchGraphQL(
     `
     query {

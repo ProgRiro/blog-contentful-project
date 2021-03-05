@@ -1,5 +1,5 @@
 export interface getPostResponseInterface {
-  [post: string]: {
+  post: {
     title: string;
     slug: string;
     content: {
