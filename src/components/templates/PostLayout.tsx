@@ -1,13 +1,12 @@
 export const config = { amp: true };
 
 import Head from "next/head";
+import { Meta } from "@/components/organisms";
 
 export const PostLayout: React.FC = ({ children }) => {
   return (
     <>
-      <Head>
-        <title>ProgRiro Blog</title>
-      </Head>
+      <Meta />
       {children}
     </>
   );
