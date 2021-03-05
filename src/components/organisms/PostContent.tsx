@@ -1,3 +1,5 @@
+export const config = { amp: true };
+
 import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
 
