@@ -5,22 +5,27 @@ import Head from "next/head";
 import { PageLayout } from "@/components/templates";
 import { PostCard } from "@/components/organisms";
 import { CMS_NAME } from "@/lib/constants";
+import { getAllPostsForHome } from "@/lib/api";
+import { getPostResponseInterface } from "@/lib/apiInterface";
 
-export default function Home() {
+export default function Home({
+  preview,
+  allPosts,
+}: {
+  preview: boolean;
+  allPosts: getPostResponseInterface[];
+}) {
+  console.log(allPosts);
   return (
     <PageLayout>
       <Head>
         <title>{CMS_NAME}</title>
       </Head>
       <div className="gridPostsContainer">
-        <PostCard />
-        <PostCard />
-        <PostCard />
-        <PostCard />
-        <PostCard />
-        <PostCard />
-        <PostCard />
-        <PostCard />
+        {allPosts.length > 0 &&
+          allPosts.map((post: any, index) => (
+            <PostCard key={index} post={post} />
+          ))}
       </div>
       <style jsx>
         {`
@@ -47,3 +52,13 @@ export default function Home() {
     </PageLayout>
   );
 }
+
+export const getStaticProps = async ({ preview = true }) => {
+  const allPosts = await getAllPostsForHome(preview);
+  return {
+    props: {
+      preview,
+      allPosts,
+    },
+  };
+};

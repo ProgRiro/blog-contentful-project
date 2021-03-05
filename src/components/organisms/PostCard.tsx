@@ -2,7 +2,30 @@ export const config = { amp: true };
 
 import { Author } from "@/components/molecules";
 
-export const PostCard: React.FC = () => {
+interface Props {
+  post: {
+    title: string;
+    slug: string;
+    content: {
+      json: object;
+    };
+    excerpt: string;
+    coverImage: {
+      url: string;
+    };
+    date: string;
+    author: {
+      name: string;
+      picture: {
+        url: string;
+      };
+    };
+  };
+}
+
+export const PostCard: React.FC<Props> = ({ post }) => {
+  const published = new Date(post.date);
+
   return (
     <>
       <a href="#">
@@ -10,13 +33,16 @@ export const PostCard: React.FC = () => {
           <amp-img
             width="auto"
             height="280px"
-            src="https://blog.zoom.us/wp-content/uploads/2020/11/iStock-1162009698-scaled.jpg"
-            alt="a cool image"
+            src={post.coverImage.url}
+            alt={`${post.title}-cover-image`}
           />
-          <Author authorName="ProgRiro" avatarSrc="/progriro.jpg" />
+          <Author
+            authorName={post.author.name}
+            avatarSrc={post.author.picture.url}
+          />
           <div className="postCardTextContainer">
-            <h3>Lorem ipsum dolor sit amet consectetur</h3>
-            <small className="date">2021/03/11</small>
+            <h3>{post.title}</h3>
+            <small className="date">{published.toLocaleDateString()}</small>
           </div>
         </div>
       </a>
