@@ -80,7 +80,7 @@ export const PostCard: React.FC<Props> = ({ post }) => {
           }
           .author {
             position: absolute;
-            top: 165px;
+            bottom: 48px;
             right: 0;
           }
           .date {
