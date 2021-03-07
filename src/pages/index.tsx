@@ -28,9 +28,6 @@ export default function Home({
       </div>
       <style jsx>
         {`
-          body {
-            background-color: gray;
-          }
           .gridPostsContainer {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
