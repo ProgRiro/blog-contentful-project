@@ -18,7 +18,7 @@ export const AboutHeader = () => {
           height="200"
           src="/progriro.webp"
           alt="progriro icon"
-          className="ampImage"
+          className="ampImg"
         />
         <amp-bodymovin-animation
           layout="fixed"
@@ -37,7 +37,7 @@ export const AboutHeader = () => {
             justify-content: space-around;
             align-items: center;
           }
-          .ampImage {
+          .ampImg {
             border-radius: 50%;
             border: 5px double #6c2735;
           }
