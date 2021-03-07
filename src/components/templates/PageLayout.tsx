@@ -1,7 +1,7 @@
 export const config = { amp: true };
 
 import { Title } from "@/components/atoms";
-import { Header, Footer, Meta } from "@/components/organisms";
+import { Header, Footer } from "@/components/organisms";
 
 interface Props {
   title?: string;
@@ -9,20 +9,17 @@ interface Props {
 
 export const PageLayout: React.FC<Props> = ({ children, title }) => {
   return (
-    <>
-      <Meta />
-      <div className="container">
-        <Header />
-        {title && <Title>{title}</Title>}
-        {children}
-        <Footer />
-        <style jsx>{`
-          .container {
-            width: 90%;
-            margin: 0 auto;
-          }
-        `}</style>
-      </div>
-    </>
+    <div className="container">
+      <Header />
+      {title && <Title>{title}</Title>}
+      {children}
+      <Footer />
+      <style jsx>{`
+        .container {
+          width: 90%;
+          margin: 0 auto;
+        }
+      `}</style>
+    </div>
   );
 };
