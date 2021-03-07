@@ -22,7 +22,7 @@ const Home = ({
       <div className="gridPostsContainer">
         {allPosts.length > 0 &&
           allPosts.map((post: any, index) => (
-            <PostCard key={index} post={post} to="posts" />
+            <PostCard key={index} data={post} to="posts" />
           ))}
       </div>
       <style jsx>

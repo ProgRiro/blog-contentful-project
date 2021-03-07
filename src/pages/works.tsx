@@ -22,7 +22,7 @@ const Works = ({
       <div className="gridWorksContainer">
         {allWorks.length > 0 &&
           allWorks.map((work: any, index) => (
-            <PostCard key={index} post={work} to="works" />
+            <PostCard key={index} data={work} to="works" />
           ))}
       </div>
       <style jsx>

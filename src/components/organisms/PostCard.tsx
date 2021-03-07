@@ -6,7 +6,7 @@ const links = ["posts", "works"] as const;
 type links = typeof links[number];
 
 interface Props {
-  post: {
+  data: {
     title: string;
     slug: string;
     content: {
@@ -27,24 +27,24 @@ interface Props {
   to: links;
 }
 
-export const PostCard: React.FC<Props> = ({ post, to }) => {
-  const published = new Date(post.date);
+export const PostCard: React.FC<Props> = ({ data, to }) => {
+  const published = new Date(data.date);
 
   return (
     <>
-      <Link as={`/${to}/${post.slug}`} href={`/${to}/[slug]`}>
+      <Link as={`/${to}/${data.slug}`} href={`/${to}/[slug]`}>
         <a>
-          <div className="postCardContainer">
+          <div className="dataCardContainer">
             <amp-img
               width="300"
               height="200"
-              src={post.coverImage.url}
+              src={data.coverImage.url}
               layout="responsive"
-              alt={`${post.title}-cover-image`}
+              alt={`${data.title}-cover-image`}
             />
-            <div className="postCardTextContainer">
-              <h3 className="title">{post.title}</h3>
-              <p className="excerpt">{post.excerpt}</p>
+            <div className="dataCardTextContainer">
+              <h3 className="title">{data.title}</h3>
+              <p className="excerpt">{data.excerpt}</p>
               <small className="date">{published.toLocaleDateString()}</small>
             </div>
           </div>
@@ -56,7 +56,7 @@ export const PostCard: React.FC<Props> = ({ post, to }) => {
             text-decoration: none;
             color: #000;
           }
-          .postCardContainer {
+          .dataCardContainer {
             width: 100%;
             padding-bottom: 15px;
             box-shadow: 0 3px 6px -2px rgb(0 10 60 / 20%);
@@ -68,10 +68,10 @@ export const PostCard: React.FC<Props> = ({ post, to }) => {
             overflow: hidden;
             transition: box-shadow 0.2s;
           }
-          .postCardContainer:hover {
+          .dataCardContainer:hover {
             box-shadow: 0 6px 12px -4px rgb(0 27 68 / 20%);
           }
-          .postCardTextContainer {
+          .dataCardTextContainer {
             margin: 0 20px;
             text-align: center;
           }
