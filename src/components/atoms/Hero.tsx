@@ -17,7 +17,8 @@ export const Hero: React.FC = () => {
             text-decoration: none;
           }
           h1 {
-            margin: 2em 0;
+            font-size: 30px;
+            margin: 1.5em 0;
             position: relative;
             padding: 0.5em 1.5em;
             border-top: solid 2px black;
