@@ -7,3 +7,4 @@ export * from "./PostBody";
 export * from "./AuthorIntroduce";
 export * from "./NavMenu";
 export * from "./Header";
+export * from "./AboutHeader";
