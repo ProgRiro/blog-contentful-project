@@ -1,7 +1,6 @@
 export const config = { amp: true };
 
 import Link from "next/link";
-import { Author } from "@/components/molecules";
 
 interface Props {
   post: {
@@ -39,12 +38,6 @@ export const PostCard: React.FC<Props> = ({ post }) => {
               layout="responsive"
               alt={`${post.title}-cover-image`}
             />
-            <div className="author">
-              <Author
-                authorName={post.author.name}
-                avatarSrc={post.author.picture.url}
-              />
-            </div>
             <div className="postCardTextContainer">
               <h3 className="title">{post.title}</h3>
               <small className="date">{published.toLocaleDateString()}</small>
