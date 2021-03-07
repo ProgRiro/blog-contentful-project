@@ -1,6 +1,6 @@
 export const config = { amp: true };
 
-import React from "react";
+import Link from "next/link";
 import { Avatar } from "@/components/atoms";
 import { Icons } from "@/components/molecules";
 
@@ -16,7 +16,11 @@ export const AuthorIntroduce: React.FC<Props> = ({
   return (
     <div className="authorIntroduce">
       <h3>Author</h3>
-      <Avatar src={authorPictureUrl} />
+      <Link href="/about">
+        <a>
+          <Avatar src={authorPictureUrl} />
+        </a>
+      </Link>
       <small>{authorName}</small>
       <amp-bodymovin-animation
         layout="fixed"
