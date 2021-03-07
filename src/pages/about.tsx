@@ -15,7 +15,7 @@ const About = ({ about }: any) => {
 
 export default About;
 
-export const getStaticProps = async ({ preview = false }) => {
+export const getStaticProps = async ({ preview = true }) => {
   const about = (await getAbout(preview)) ?? [];
   return {
     props: {

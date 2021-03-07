@@ -137,7 +137,8 @@ export const getAbout = async (preview: boolean) => {
           }
         }
       }
-    `
+    `,
+    preview
   );
   return extractAbout(entry);
 };
