@@ -14,3 +14,7 @@ author {
     }
 }
 `;
+
+export const ABOUT_GRAPHQL_FIELDS = `
+content
+`;

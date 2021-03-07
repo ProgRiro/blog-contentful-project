@@ -1,5 +1,5 @@
 import { getPostResponseInterface } from "./apiInterface";
-import { POST_GRAPHQL_FIELDS } from "./graphqlSchema";
+import { ABOUT_GRAPHQL_FIELDS, POST_GRAPHQL_FIELDS } from "./graphqlSchema";
 
 const fetchGraphQL = async (
   query: string,
@@ -21,6 +21,8 @@ const fetchGraphQL = async (
     }
   ).then((res) => res.json());
 };
+
+// Post
 
 const extractPost = (fetchResponse: any): getPostResponseInterface => {
   return fetchResponse?.data?.postCollection?.items?.[0];
@@ -117,4 +119,25 @@ export const getPosts = async (
     post: extractPost(entry),
     morePosts: extractPostEntries(entries),
   };
+};
+
+// About
+
+const extractAbout = (fetchResponse: any) => {
+  return fetchResponse?.data?.aboutCollection?.items?.[0];
+};
+
+export const getAbout = async (preview: boolean) => {
+  const entry = await fetchGraphQL(
+    `
+      query {
+        aboutCollection(preview: ${preview ? "true" : "false"}) {
+          items {
+            ${ABOUT_GRAPHQL_FIELDS}
+          }
+        }
+      }
+    `
+  );
+  return extractAbout(entry);
 };
