@@ -4,7 +4,7 @@ export const AboutHeader = () => {
   return (
     <>
       <div className="about">
-        <amp-bodymovin-animation
+        {/* <amp-bodymovin-animation
           layout="fixed"
           width="150"
           height="150"
@@ -12,7 +12,7 @@ export const AboutHeader = () => {
           // src="https://assets8.lottiefiles.com/packages/lf20_gqgyomqx.json"
           loop="true"
           className="ampBodymovinAnimation"
-        />
+        /> */}
         <amp-img
           width="200"
           height="200"
@@ -20,7 +20,7 @@ export const AboutHeader = () => {
           alt="progriro icon"
           className="ampImg"
         />
-        <amp-bodymovin-animation
+        {/* <amp-bodymovin-animation
           layout="fixed"
           width="150"
           height="150"
@@ -28,7 +28,7 @@ export const AboutHeader = () => {
           // src="https://assets8.lottiefiles.com/packages/lf20_gqgyomqx.json"
           loop="true"
           className="ampBodymovinAnimation"
-        />
+        /> */}
       </div>
       <style jsx>
         {`
