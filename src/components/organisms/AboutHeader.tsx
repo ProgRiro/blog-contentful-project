@@ -39,6 +39,7 @@ export const AboutHeader = () => {
           }
           .ampImage {
             border-radius: 50%;
+            border: 5px double #6c2735;
           }
           @media screen and (max-width: 480px) {
             .ampBodymovinAnimation {
