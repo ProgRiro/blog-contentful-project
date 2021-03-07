@@ -5,3 +5,5 @@ export * from "./Meta";
 export * from "./PostHeader";
 export * from "./PostBody";
 export * from "./AuthorIntroduce";
+export * from "./NavMenu";
+export * from "./Header";
