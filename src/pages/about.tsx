@@ -21,6 +21,5 @@ export const getStaticProps = async ({ preview = true }) => {
     props: {
       about,
     },
-    revalidate: 300,
   };
 };
