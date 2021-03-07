@@ -3,8 +3,8 @@ export const config = { amp: true };
 // https://colorhunt.co/palette/212984
 // https://flatuicolors.com/palette/de
 export const colors = {
-  primary: "#14274e",
-  secondary: "#9ba4b4",
+  primary: "#6c2735",
+  secondary: "#14274e",
   warning: "#f7b731",
   danger: "#eb3b5a",
 } as const;
@@ -22,15 +22,16 @@ export const Button: React.FC<Props> = ({ children, color }) => {
         {`
           button {
             color: #fff;
-            font-size: 20px;
-            padding: 10px 25px;
-            border-radius: 10px;
+            font-size: 18px;
+            padding: 8px 25px;
+            border-radius: 2px;
             border: none;
-            box-shadow: 0 0 10px gray;
+            cursor: pointer;
+            box-shadow: 0 3px 6px -2px rgb(0 10 60 / 20%);
             transition: box-shadow 0.3s;
           }
           button:hover {
-            box-shadow: none;
+            box-shadow: 0 6px 12px -4px rgb(0 27 68 / 20%);
           }
         `}
       </style>
