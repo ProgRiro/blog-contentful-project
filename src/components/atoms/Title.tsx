@@ -7,7 +7,8 @@ export const Title: React.FC = ({ children }) => {
       <style jsx>
         {`
           h1 {
-            font-size: 50px;
+            font-size: 40px;
+            text-align: center;
           }
         `}
       </style>
