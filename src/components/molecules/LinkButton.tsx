@@ -11,7 +11,9 @@ interface Props {
 export const LinkButton: React.FC<Props> = ({ children, to, color }) => {
   return (
     <Link href={to}>
-      <Button color={color}>{children}</Button>
+      <a>
+        <Button color={color}>{children}</Button>
+      </a>
     </Link>
   );
 };
