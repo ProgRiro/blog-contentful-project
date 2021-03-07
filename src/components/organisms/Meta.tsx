@@ -6,7 +6,7 @@ import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 export const Meta = () => {
   return (
     <Head>
-      <link
+      {/* <link
         rel="apple-touch-icon"
         sizes="180x180"
         href="/favicon/apple-touch-icon.png"
@@ -28,11 +28,9 @@ export const Meta = () => {
         href="/favicon/safari-pinned-tab.svg"
         color="#000000"
       />
-      <link rel="shortcut icon" href="/favicon/favicon.ico" />
+      <link rel="shortcut icon" href="/favicon/favicon.ico" /> */}
       <meta name="msapplication-TileColor" content="#000000" />
-      <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
-      <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
         content={`A statically generated blog example using Next.js and ${CMS_NAME}.`}
