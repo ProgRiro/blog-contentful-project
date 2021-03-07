@@ -17,12 +17,13 @@ export const Hero: React.FC = () => {
             text-decoration: none;
           }
           h1 {
+            color: #6c2735;
             font-size: 30px;
             margin: 1.5em 0;
             position: relative;
             padding: 0.5em 1.5em;
-            border-top: solid 2px black;
-            border-bottom: solid 2px black;
+            border-top: solid 2px #6c2735;
+            border-bottom: solid 2px #6c2735;
           }
           h1:before,
           h1:after {
@@ -32,7 +33,7 @@ export const Hero: React.FC = () => {
             width: 2px;
             height: -webkit-calc(100% + 20px);
             height: calc(100% + 20px);
-            background-color: black;
+            background-color: #6c2735;
           }
           h1:before {
             left: 10px;

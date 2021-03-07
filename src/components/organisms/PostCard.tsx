@@ -55,8 +55,8 @@ export const PostCard: React.FC<Props> = ({ post }) => {
             width: 100%;
             padding-bottom: 15px;
             box-shadow: 0 3px 6px -2px rgb(0 10 60 / 20%);
-            border-radius: 10px;
-            border-top: solid 10px gray;
+            border-radius: 2px;
+            border-top: double 5px #6c2735;
             position: relative;
             overflow: hidden;
             transition: box-shadow 0.2s;

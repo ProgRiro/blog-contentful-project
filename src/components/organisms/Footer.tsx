@@ -12,11 +12,12 @@ export const Footer: React.FC = () => {
       <style jsx>
         {`
           footer {
+            color: #6c2735;
             margin: 3em 0;
             position: relative;
             padding: 0.5em 1.5em;
-            border-top: solid 2px black;
-            border-bottom: solid 2px black;
+            border-top: solid 2px #6c2735;
+            border-bottom: solid 2px #6c2735;
             text-align: center;
           }
           footer:before,
@@ -27,7 +28,7 @@ export const Footer: React.FC = () => {
             width: 2px;
             height: -webkit-calc(100% + 20px);
             height: calc(100% + 20px);
-            background-color: black;
+            background-color: #6c2735;
           }
           footer:before {
             left: 10px;

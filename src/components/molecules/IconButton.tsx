@@ -23,7 +23,7 @@ export const IconButton: React.FC<Props> = ({ icon, link, ...rest }) => {
       <style jsx>
         {`
           a {
-            color: #000;
+            color: #6c2735;
           }
         `}
       </style>
