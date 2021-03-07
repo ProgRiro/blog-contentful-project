@@ -18,3 +18,20 @@ author {
 export const ABOUT_GRAPHQL_FIELDS = `
 content
 `;
+
+export const WORKS_GRAPHQL_FIELDS = `
+title
+slug
+content
+excerpt
+coverImage {
+    url
+}
+date
+author {
+    name
+    picture {
+        url
+    }
+}
+`;

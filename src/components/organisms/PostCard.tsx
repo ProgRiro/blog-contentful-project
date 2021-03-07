@@ -2,6 +2,9 @@ export const config = { amp: true };
 
 import Link from "next/link";
 
+const links = ["posts", "works"] as const;
+type links = typeof links[number];
+
 interface Props {
   post: {
     title: string;
@@ -21,14 +24,15 @@ interface Props {
       };
     };
   };
+  to: links;
 }
 
-export const PostCard: React.FC<Props> = ({ post }) => {
+export const PostCard: React.FC<Props> = ({ post, to }) => {
   const published = new Date(post.date);
 
   return (
     <>
-      <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
+      <Link as={`/${to}/${post.slug}`} href={`/${to}/[slug]`}>
         <a>
           <div className="postCardContainer">
             <amp-img

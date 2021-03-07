@@ -4,41 +4,41 @@ import Head from "next/head";
 
 import { PageLayout } from "@/components/templates";
 import { PostCard } from "@/components/organisms";
-import { CMS_NAME } from "@/lib/constants";
-import { getAllPostsForHome, getPostResponseInterface } from "@/lib";
+import { CMS_NAME } from "@/lib";
+import { getAllWorksForHome, getWorksResponseInterface } from "@/lib";
 
-const Home = ({
+const Works = ({
   preview,
-  allPosts,
+  allWorks,
 }: {
   preview: boolean;
-  allPosts: getPostResponseInterface[];
+  allWorks: getWorksResponseInterface[];
 }) => {
   return (
-    <PageLayout title="🏠 Home 🏠">
+    <PageLayout title="📚 Works 📚">
       <Head>
         <title>{CMS_NAME}</title>
       </Head>
-      <div className="gridPostsContainer">
-        {allPosts.length > 0 &&
-          allPosts.map((post: any, index) => (
-            <PostCard key={index} post={post} to="posts" />
+      <div className="gridWorksContainer">
+        {allWorks.length > 0 &&
+          allWorks.map((work: any, index) => (
+            <PostCard key={index} post={work} to="works" />
           ))}
       </div>
       <style jsx>
         {`
-          .gridPostsContainer {
+          .gridWorksContainer {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 2em 1.8em;
           }
           @media screen and (max-width: 1024px) {
-            .gridPostsContainer {
+            .gridWorksContainer {
               grid-template-columns: repeat(2, 1fr);
             }
           }
           @media screen and (max-width: 480px) {
-            .gridPostsContainer {
+            .gridWorksContainer {
               grid-template-columns: repeat(1, 1fr);
             }
           }
@@ -48,14 +48,14 @@ const Home = ({
   );
 };
 
-export default Home;
+export default Works;
 
 export const getStaticProps = async ({ preview = true }) => {
-  const allPosts = (await getAllPostsForHome(preview)) ?? [];
+  const allWorks = (await getAllWorksForHome(preview)) ?? [];
   return {
     props: {
       preview,
-      allPosts,
+      allWorks,
     },
     revalidate: 300,
   };

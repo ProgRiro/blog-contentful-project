@@ -18,3 +18,24 @@ export interface getPostResponseInterface {
     };
   };
 }
+
+export interface getWorksResponseInterface {
+  works: {
+    title: string;
+    slug: string;
+    content: {
+      json: object;
+    };
+    excerpt: string;
+    coverImage: {
+      url: string;
+    };
+    date: string;
+    author: {
+      name: string;
+      picture: {
+        url: string;
+      };
+    };
+  };
+}
