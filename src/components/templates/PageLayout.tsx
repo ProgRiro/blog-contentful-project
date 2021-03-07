@@ -18,7 +18,7 @@ export const PageLayout: React.FC<Props> = ({ children, title }) => {
         <Footer />
         <style jsx>{`
           .container {
-            width: 80%;
+            width: 90%;
             margin: 0 auto;
           }
         `}</style>

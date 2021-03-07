@@ -12,7 +12,7 @@ export const PostLayout: React.FC = ({ children }) => {
         <Footer />
         <style jsx>{`
           .container {
-            width: 80%;
+            width: 90%;
             margin: 0 auto;
           }
         `}</style>
