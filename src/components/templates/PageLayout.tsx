@@ -1,7 +1,7 @@
 export const config = { amp: true };
 
-import { Hero, Title } from "@/components/atoms";
-import { Footer, Meta } from "@/components/organisms";
+import { Title } from "@/components/atoms";
+import { Header, Footer, Meta } from "@/components/organisms";
 
 interface Props {
   title?: string;
@@ -12,7 +12,7 @@ export const PageLayout: React.FC<Props> = ({ children, title }) => {
     <>
       <Meta />
       <div className="container">
-        <Hero />
+        <Header />
         {title && <Title>{title}</Title>}
         {children}
         <Footer />

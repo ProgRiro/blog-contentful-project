@@ -1,13 +1,13 @@
 export const config = { amp: true };
 
-import { Hero } from "@/components/atoms";
-import { Footer } from "@/components/organisms";
+import { Header, Footer, Meta } from "@/components/organisms";
 
 export const PostLayout: React.FC = ({ children }) => {
   return (
     <>
+      <Meta />
       <div className="container">
-        <Hero />
+        <Header />
         {children}
         <Footer />
         <style jsx>{`
