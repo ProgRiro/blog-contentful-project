@@ -40,6 +40,7 @@ export const PostHeader: React.FC<Props> = ({
             src={coverImageUrl}
             layout="responsive"
             alt={`${title}-cover-image`}
+            className="ampImg"
           />
         </div>
         <div className="headerRight">
@@ -69,6 +70,9 @@ export const PostHeader: React.FC<Props> = ({
           }
           .headerRight {
             width: 22%;
+          }
+          .ampImg {
+            border: 5px double #6c2735;
           }
           @media screen and (max-width: 1024px) {
             .headerLeft {
