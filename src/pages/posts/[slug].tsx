@@ -8,7 +8,7 @@ import { Loader } from "@/components/molecules";
 import { PostBody, PostHeader } from "@/components/organisms";
 import { PostLayout } from "@/components/templates";
 import { CMS_NAME } from "@/lib/constants";
-import { getAllPostsWithSlug, getPosts } from "@/lib/api";
+import { getAllPostsWithSlug, getPosts } from "@/lib";
 
 interface PostGetStaticProps {
   post: any;

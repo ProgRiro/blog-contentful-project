@@ -2,7 +2,7 @@ export const config = { amp: true };
 
 import { AboutHeader, PostBody } from "@/components/organisms";
 import { PageLayout } from "@/components/templates";
-import { getAbout } from "@/lib/api";
+import { getAbout } from "@/lib";
 
 const About = ({ about }: any) => {
   return (

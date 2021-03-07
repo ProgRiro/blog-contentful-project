@@ -5,8 +5,7 @@ import Head from "next/head";
 import { PageLayout } from "@/components/templates";
 import { PostCard } from "@/components/organisms";
 import { CMS_NAME } from "@/lib/constants";
-import { getAllPostsForHome } from "@/lib/api";
-import { getPostResponseInterface } from "@/lib/apiInterface";
+import { getAllPostsForHome, getPostResponseInterface } from "@/lib";
 
 const Home = ({
   preview,
