@@ -8,13 +8,13 @@ import { CMS_NAME } from "@/lib/constants";
 import { getAllPostsForHome } from "@/lib/api";
 import { getPostResponseInterface } from "@/lib/apiInterface";
 
-export default function Home({
+const Home = ({
   preview,
   allPosts,
 }: {
   preview: boolean;
   allPosts: getPostResponseInterface[];
-}) {
+}) => {
   return (
     <PageLayout title="🏠 Home 🏠">
       <Head>
@@ -47,7 +47,9 @@ export default function Home({
       </style>
     </PageLayout>
   );
-}
+};
+
+export default Home;
 
 export const getStaticProps = async ({ preview = true }) => {
   const allPosts = (await getAllPostsForHome(preview)) ?? [];
