@@ -40,6 +40,7 @@ export const PostCard: React.FC<Props> = ({ post }) => {
             />
             <div className="postCardTextContainer">
               <h3 className="title">{post.title}</h3>
+              <p className="excerpt">{post.excerpt}</p>
               <small className="date">{published.toLocaleDateString()}</small>
             </div>
           </div>
@@ -71,12 +72,16 @@ export const PostCard: React.FC<Props> = ({ post }) => {
             text-align: center;
           }
           .title {
-            margin-top: 30px;
+            margin-top: 25px;
+            margin-bottom: 0;
           }
           .author {
             position: absolute;
             bottom: 48px;
             right: 0;
+          }
+          .excerpt {
+            margin: 10px auto;
           }
           .date {
             display: block;
