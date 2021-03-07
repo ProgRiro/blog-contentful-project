@@ -1,7 +1,5 @@
 export const config = { amp: true };
 
-import React from "react";
-
 export const Loader = () => {
   return (
     <>
