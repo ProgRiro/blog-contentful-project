@@ -19,7 +19,8 @@ export const Hero: React.FC = () => {
           h1 {
             color: #6c2735;
             font-size: 30px;
-            margin: 1.5em 0;
+            margin-top: 1.5em;
+            margin-bottom: 15px;
             position: relative;
             padding: 0.5em 1.5em;
             border-top: solid 2px #6c2735;
