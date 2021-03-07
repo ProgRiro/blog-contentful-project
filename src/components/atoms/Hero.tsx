@@ -20,11 +20,12 @@ export const Hero: React.FC = () => {
             color: #6c2735;
             font-size: 30px;
             margin-top: 1.5em;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             position: relative;
             padding: 0.5em 1.5em;
             border-top: solid 2px #6c2735;
             border-bottom: solid 2px #6c2735;
+            text-align: center;
           }
           h1:before,
           h1:after {
