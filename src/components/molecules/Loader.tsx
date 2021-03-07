@@ -8,9 +8,9 @@ export const Loader = () => {
       <div className="loader">
         <amp-bodymovin-animation
           layout="fixed"
-          width="180"
-          height="180"
-          src="https://assets6.lottiefiles.com/packages/lf20_90ZmDV.json"
+          width="200"
+          height="200"
+          src="https://assets8.lottiefiles.com/packages/lf20_gqgyomqx.json"
           loop="true"
         />
       </div>
