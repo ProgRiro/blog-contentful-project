@@ -16,7 +16,7 @@ export default function Home({
   allPosts: getPostResponseInterface[];
 }) {
   return (
-    <PageLayout title="🏠 Home">
+    <PageLayout title="🏠 Home 🏠">
       <Head>
         <title>{CMS_NAME}</title>
       </Head>
