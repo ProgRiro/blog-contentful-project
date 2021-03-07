@@ -16,7 +16,7 @@ export const AboutHeader = () => {
         <amp-img
           width="200"
           height="200"
-          src="/progriro.jpg"
+          src="/progriro.webp"
           alt="progriro icon"
           className="ampImage"
         />
