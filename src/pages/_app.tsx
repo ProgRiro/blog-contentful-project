@@ -8,7 +8,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         {`
           html,
           body {
-            font-family: "Noto Sans", "M PLUS Rounded 1c", sans-serif;
+            font-family: "M PLUS Rounded 1c", "Noto Sans", sans-serif;
             background-color: #f2efe4;
           }
         `}
