@@ -39,6 +39,7 @@ const Work: React.FC<WorkGetStaticProps> = ({ work, moreWorks, preview }) => {
             title={work.title}
             date={work.date}
             coverImageUrl={work.coverImage.url}
+            coverIcon={!!work.coverIcon && work.coverIcon}
             authorName={work.author.name}
             authorPictureUrl={work.author.picture.url}
           />

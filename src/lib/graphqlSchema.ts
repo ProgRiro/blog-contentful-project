@@ -6,6 +6,7 @@ excerpt
 coverImage {
     url
 }
+coverIcon
 date
 author {
     name
@@ -27,6 +28,7 @@ excerpt
 coverImage {
     url
 }
+coverIcon
 date
 author {
     name
