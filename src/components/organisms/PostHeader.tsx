@@ -76,7 +76,7 @@ export const PostHeader: React.FC<Props> = ({
             justify-content: center;
             align-items: center;
             width: 100%;
-            font-size: 4em;
+            font-size: 8em;
           }
           .headerLeft {
             width: 70%;
@@ -96,6 +96,10 @@ export const PostHeader: React.FC<Props> = ({
             }
           }
           @media screen and (max-width: 480px) {
+            .iconEyeCatch {
+              height: auto;
+              font-size: 5em;
+            }
             .headerLeft {
               width: 100%;
             }
