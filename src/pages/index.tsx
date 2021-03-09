@@ -15,7 +15,7 @@ const Home = ({
   allPosts: getPostResponseInterface[];
 }) => {
   return (
-    <PageLayout title="🏠 Home 🏠">
+    <PageLayout title="👋 Hi there! 👋">
       <Head>
         <title>{CMS_NAME}</title>
       </Head>

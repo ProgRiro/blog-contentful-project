@@ -6,7 +6,7 @@ import { getAbout } from "@/lib";
 
 const About = ({ about }: any) => {
   return (
-    <PageLayout title="👨‍💻 About 👨‍💻">
+    <PageLayout title="💡 About 💡">
       <AboutHeader />
       <PostBody content={about.content} />
     </PageLayout>
