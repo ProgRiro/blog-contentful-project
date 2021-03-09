@@ -1,13 +1,14 @@
 export const config = { amp: true };
 
 import Link from "next/link";
+import { CMS_NAME } from "@/lib/constants";
 
 export const Hero: React.FC = () => {
   return (
     <>
       <Link href="/">
         <a>
-          <h1>ProgRiro Blog</h1>
+          <h1>{CMS_NAME}</h1>
         </a>
       </Link>
       <style jsx>
