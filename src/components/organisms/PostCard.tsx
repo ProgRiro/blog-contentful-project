@@ -16,6 +16,7 @@ interface Props {
     coverImage: {
       url: string;
     };
+    coverIcon?: string;
     date: string;
     author: {
       name: string;
@@ -35,13 +36,17 @@ export const PostCard: React.FC<Props> = ({ data, to }) => {
       <Link as={`/${to}/${data.slug}`} href={`/${to}/[slug]`}>
         <a>
           <div className="dataCardContainer">
-            <amp-img
-              width="300"
-              height="200"
-              src={data.coverImage.url}
-              layout="responsive"
-              alt={`${data.title}-cover-image`}
-            />
+            {data.coverIcon ? (
+              <div className="iconEyeCatch">{data.coverIcon}</div>
+            ) : (
+              <amp-img
+                width="300"
+                height="200"
+                src={data.coverImage.url}
+                layout="responsive"
+                alt={`${data.title}-cover-image`}
+              />
+            )}
             <div className="dataCardTextContainer">
               <h3 className="title">{data.title}</h3>
               <p className="excerpt">{data.excerpt}</p>
@@ -57,7 +62,6 @@ export const PostCard: React.FC<Props> = ({ data, to }) => {
             color: #000;
           }
           .dataCardContainer {
-            width: 100%;
             padding-bottom: 15px;
             box-shadow: 0 3px 6px -2px rgb(0 10 60 / 20%);
             border-radius: 2px;
@@ -75,6 +79,15 @@ export const PostCard: React.FC<Props> = ({ data, to }) => {
             margin: 0 20px;
             text-align: center;
           }
+          .iconEyeCatch {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 100%;
+            font-size: 4.8em;
+            background-color: rgba(108, 39, 53, 0.1);
+          }
           .title {
             margin-top: 25px;
             margin-bottom: 0;
@@ -90,6 +103,12 @@ export const PostCard: React.FC<Props> = ({ data, to }) => {
           .date {
             display: block;
             text-align: right;
+          }
+          @media screen and (max-width: 480px) {
+            .dataCardContainer {
+              width: 90%;
+              margin: 0 auto;
+            }
           }
         `}
       </style>
