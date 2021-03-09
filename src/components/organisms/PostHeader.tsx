@@ -6,6 +6,7 @@ interface Props {
   title: string;
   date: string;
   coverImageUrl: string;
+  coverIcon?: string;
   authorName: string;
   authorPictureUrl: string;
 }
@@ -14,6 +15,7 @@ export const PostHeader: React.FC<Props> = ({
   title,
   date,
   coverImageUrl,
+  coverIcon,
   authorName,
   authorPictureUrl,
 }) => {
@@ -34,14 +36,18 @@ export const PostHeader: React.FC<Props> = ({
               {published.toLocaleDateString()}
             </amp-timeago>
           </div>
-          <amp-img
-            width="300"
-            height="200"
-            src={coverImageUrl}
-            layout="responsive"
-            alt={`${title}-cover-image`}
-            className="ampImg"
-          />
+          {coverIcon ? (
+            <div className="iconEyeCatch">{coverIcon}</div>
+          ) : (
+            <amp-img
+              width="300"
+              height="200"
+              src={coverImageUrl}
+              layout="responsive"
+              alt={`${title}-cover-image`}
+              className="ampImg"
+            />
+          )}
         </div>
         <div className="headerRight">
           <AuthorIntroduce
@@ -65,6 +71,13 @@ export const PostHeader: React.FC<Props> = ({
             font-size: 35px;
             margin: 0;
           }
+          .iconEyeCatch {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            font-size: 8em;
+          }
           .headerLeft {
             width: 70%;
           }
@@ -83,6 +96,10 @@ export const PostHeader: React.FC<Props> = ({
             }
           }
           @media screen and (max-width: 480px) {
+            .iconEyeCatch {
+              height: auto;
+              font-size: 5em;
+            }
             .headerLeft {
               width: 100%;
             }

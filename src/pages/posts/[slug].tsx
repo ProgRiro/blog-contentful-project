@@ -39,6 +39,7 @@ const Post: React.FC<PostGetStaticProps> = ({ post, morePosts, preview }) => {
             title={post.title}
             date={post.date}
             coverImageUrl={post.coverImage.url}
+            coverIcon={!!post.coverIcon && post.coverIcon}
             authorName={post.author.name}
             authorPictureUrl={post.author.picture.url}
           />

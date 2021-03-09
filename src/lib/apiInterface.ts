@@ -9,6 +9,7 @@ export interface getPostResponseInterface {
     coverImage: {
       url: string;
     };
+    coverIcon?: string;
     date: string;
     author: {
       name: string;
@@ -30,6 +31,7 @@ export interface getWorksResponseInterface {
     coverImage: {
       url: string;
     };
+    coverIcon?: string;
     date: string;
     author: {
       name: string;
