@@ -28,6 +28,7 @@ excerpt
 coverImage {
     url
 }
+coverIcon
 date
 author {
     name
