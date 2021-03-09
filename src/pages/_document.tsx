@@ -22,12 +22,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&family=Noto+Sans:wght@400;700&display=swap"
             rel="stylesheet"
           />
-          <style jsx global>{`
-            body {
-              font-family: "Noto Sans", "M PLUS Rounded 1c", sans-serif;
-              background-color: #f2efe4;
-            }
-          `}</style>
         </Head>
         <body>
           <Main />
