@@ -1,13 +1,14 @@
 export const config = { amp: true };
 
 import { Icons } from "@/components/molecules";
+import { COPYRIGHT_YEAR } from "@/lib/constants";
 
 export const Footer: React.FC = () => {
   return (
     <>
       <footer>
         <Icons />
-        <small>© Copyright 2021 ProgRiro All rights reserved.</small>
+        <small>© {COPYRIGHT_YEAR} ProgRiro All rights reserved.</small>
       </footer>
       <style jsx>
         {`
